@@ -46,8 +46,8 @@ public class MCQ extends HttpServlet {
 		int catogaryNo = Integer.parseInt(catagaryNumber);
 		
 		//generate random number to randomly choose question
-		int randomNumber = 2;
-		
+		//int randomNumber = (int) (Math.random()*10%5);
+		int randomNumber = 1;
 		String tableName = toCatagary(catogaryNo);
 		out.println("print the tableName: "+tableName);
 		
@@ -77,28 +77,8 @@ public class MCQ extends HttpServlet {
 				request.setAttribute("question", question);
 				request.setAttribute("CorrectAnswer",CorrectAnswer);
 				
-				String catagory =(String) request.getAttribute("catagory");
-				request.setAttribute("catagory",catagory);
 				getServletContext().getRequestDispatcher("/game/game.jsp").forward(request, response);
-			    con.close();	
-			    //List<String> airPorts=new ArrayList<>();
-				
-				/*
-				out.println("<h1>Question</h1>");
-				out.println("<h2>"+question+"</h2>");
-				out.println("<h2>"+questionID+"</h2>");		
-				out.println("<form action=\"Teacher\" method =\"post\">");
-				out.println("<input type=\"radio\" value=\""+1+"\" name=\"userAnswer\"/>"+ans1+"<br>");
-				out.println("<input type=\"radio\" value=\""+2+"\" name=\"userAnswer\"/>"+ans2+"<br>");
-				out.println("<input type=\"radio\" value=\""+3+"\" name=\"userAnswer\"/>"+ans3+"<br>");
-				out.println("<input type=\"radio\" value=\""+4+"\" name=\"userAnswer\"/>"+ans4+"<br>");
-				out.println("<input type=\"submit\"/");
-				out.println("</form>");
-				//out.println("<form><input type=\"hidden\"value=\""+CorrectAnswer+"\" name=\"hiddenCorrectAns\"/></form>");
-				out.println("<form><input action=\"src/faceIt.game/Teacher\" value=\""+CorrectAnswer+"\" method =\"\" name=\"hiddenCorrectAns\">");
-				out.println("<input type=\"submit\"/");
-				out.println("</form>");
-				*/
+			    con.close();
 			}
 				
 		} catch (ClassNotFoundException e) {
@@ -116,12 +96,12 @@ public class MCQ extends HttpServlet {
 	//to determind which subject to select
 	public static String toCatagary(int number){
 		switch(number){
-		case 0: return "SCIENCE";
-		case 1: return "MATHEMATICES";
-		case 2: return "GENERALKNOWLEDGE";
+		case 5: return "SCIENCE";
+		case 4: return "MATHEMATICS";
+		case 1: return "GENERALKNOWLEDGE";
 		case 3: return "LANGUAGES";
-		case 4: return "HISTORY";
-		case 5: return "BUDDHISM";
+		case 2: return "HISTORY";
+		case 0: return "BUDDHISM";
 		default: return "wrong INDEX";
 		}
 	}

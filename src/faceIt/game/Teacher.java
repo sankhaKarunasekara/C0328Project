@@ -44,36 +44,27 @@ public class Teacher extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		String ans = request.getParameter("userAnswer");
-		int userAnswer = Integer.parseInt(ans);
 		
-		String correctAns = request.getParameter("correctAnswer");
-		int correctAnswer = Integer.parseInt(correctAns);
 		//int correctAnswer = 4;
 		
-		
-		if(AnswerCheaker(userAnswer, correctAnswer)){
-			getServletContext().getRequestDispatcher("/game/correct.jsp").forward(request, response);
-		}else{
-			getServletContext().getRequestDispatcher("/game/wrong.jsp").forward(request, response);
-		}
-		/*
-		//current time
-		long timeNow = System.currentTimeMillis();
-		
-		//time after 3 seconds
-		long timeNext = timeNow + (4009);
-		while(1==1){
-			long currentTime = System.currentTimeMillis();
+		try{
+			String ans = request.getParameter("userAnswer");
 			
-			if(currentTime>timeNext){
-				out.println("<h1>Anaswer is CORRECT</h1>");
-				break;
-			}
+			int userAnswer = Integer.parseInt(ans);
+			
+			String correctAns = request.getParameter("correctAnswer");
+			int correctAnswer = Integer.parseInt(correctAns);
+			
+		if(AnswerCheaker(userAnswer, correctAnswer)){
+			getServletContext().getRequestDispatcher("/game/Examiner/correct.jsp").forward(request, response);
+		}else{
+			getServletContext().getRequestDispatcher("/game/Examiner/wrong.jsp").forward(request, response);
 		}
 		
-		*/
-		//getServletContext().getRequestDispatcher("/game/game.jsp").forward(request, response);
+		}catch (Exception e) {
+			getServletContext().getRequestDispatcher("/game/Examiner/wrong.jsp").forward(request, response);
+		}
+		
 	}
 	
 	protected boolean AnswerCheaker(int givenAns, int correctAns){

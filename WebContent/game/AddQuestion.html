@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AddQuestions</title>
+
+</head>
+<body>
+<h1>Add Question to the DataBase</h1>
+<hr></hr>
+<form action="AddQuestionServlet" method="post">
+<h2>Category:</h2> 
+		  <input type ="radio" name="catagary" value="SCIENCE"/> SCIENCE<br>
+		  <input type ="radio" name="catagary" value="GENERALKNOWLEDGE"/> GENERALKNOWLEDGE<br>
+		  <input type ="radio" name="catagary" value="BUDDHISM"/>BUDDHISM<br>
+		  <input type ="radio" name="catagary" value="MATHEMATICS"/>MATHEMATICS<br>
+		  <input type ="radio" name="catagary" value="HISTORY"/>HISTORY<br>
+		  <input type ="radio" name="catagary" value="LANGUAGES"/>LANGUAGES<br>
+		  
+<h2>Question:</h2> <input type ="text" name="question" style="height: 61px; width: 824px; "/>
+<h2>ans1:<input type="text" name="ans1" style="height: 38px; width: 502px; "></h2> 
+<h2>ans2:<input type="text" name="ans2" style="height: 36px; width: 500px; "></h2> 
+<h2>ans3:<input type="text" name="ans3" style="width: 499px; height: 36px"></h2>
+<h2>ans4:<input type="text" name="ans4" style="width: 499px; height: 36px"></h2> 
+<h3>CorrectAnswer: <input type="text" name="CorrectAnswer" style="width: 63px;"><input type="submit" value="Add Question"><h3> 
+</h3>
+
+</form>
+</body>
+</html>

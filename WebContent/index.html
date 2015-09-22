@@ -1,16 +1,141 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>first</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
+  
+<title>WellcomePage</title>
+<style type="text/css">
+    
+    body { text-align: center; padding: 40px; background: #F5F5F5; }
+.container { width: 500px; text-align: center; margin: auto;}
+.copyright { margin-top: 50px; font-size: 12px; text-transform: uppercase; }
+.copyright a { text-decoration: none; padding: 5px;background: #c0392b; color: #FFFFFF; }
+.copyright a:hover { background: transparent; color: #c0392b; }
+
+.button {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 30px;
+  padding-left: 70px;
+  position: relative;
+  background-color:rgb(41,127,184);
+  color:rgb(255,255,255);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  
+  
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+-ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true)";zoom:1;
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff123852,Positive=true);
+
+  -moz-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  -webkit-box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  box-shadow:0px 2px 2px rgba(0,0,0,0.2);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true)";
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true);
+}
+
+.button span {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  background-color:rgba(0,0,0,0.5);
+  
+  -webkit-border-top-left-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+border-right: 1px solid  rgba(0,0,0,0.15);
+}
+
+.button:hover span, .button.active span {
+  background-color:rgb(0,102,26);
+  border-right: 1px solid  rgba(0,0,0,0.3);
+}
+
+.button:active {
+  margin-top: 2px;
+  margin-bottom: 13px;
+
+  -moz-box-shadow:0px 1px 0px rgba(255,255,255,0.5);
+-webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.5);
+box-shadow:0px 1px 0px rgba(255,255,255,0.5);
+-ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccffffff,Positive=true)";
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ccffffff,Positive=true);
+}
+
+.button.orange {
+  background: #FF7F00;
+}
+
+.button.purple {
+  background: #8e44ad;
+}
+
+.button.turquoise {
+  background: #1abc9c;
+}
+    
+    
+    
+    
+</style>
 </head>
-<body style="width: 104px; ">
-<!-- if you hit the Login word in the webpage you will end up in Login.html webpage -->
-<h2 style="width: 453px; "> Welcome to faceIt Register/Login</h2>
-<h4><a href="Login.html">Login</a></h4>
-<h4><a href="Reg.html">Register</a><h4>
-<h4><a href="login/index.html">Login New</a></h4>
-<h4><a href="register/index.html">Register New</a><h4>
+
+<body>
+<!-- if you hit the Login word in the web page you will end up in Login.html web page -->
+
+<div class="container">
+			<!-- freshdesignweb top bar -->
+            <div class="freshdesignweb-top">
+                <span class="right">
+                    <a href="http://www.freshdesignweb.com/beautiful-registration-form-with-html5-and-css3.html">
+                        <strong>Back To Home</strong>
+                    </a>
+                </span><a href="http://www.freshdesignweb.com" target="_blank">Home</a>
+                
+                <div class="clr"></div>
+            </div><!--/ freshdesignweb top bar -->
+			<header>
+				<h1><span>FaceIt</span>Welcome to FaceIt</h1>
+            </header>       
+			<div class="container">
+					<a href="login/index.html" class="button turquoise"><span>✓</span>User Log in</a>
+					<a href="register/index.html" class="button red"><span>✓</span>Registeration It's Free</a>	
+					<a href="../gameRequests/onGoingGames.jsp" class="button purple"><span>✓</span><strong>About Us</strong></a>
+					<a href="../gameRequests/onGoingGames.jsp" class="button orange"><span>✓</span><strong>Credits</strong></a>
+					<a href="../game/AddQuestion.html" class="button turquoise"><span>✓</span>Administrator LogIn</a>	
+			
+			<p><strong>FaceIt</strong> is a game specially designed <br>for Ordinary Level students.<br>
+			 <div  align="justify">
+			<br>It will provide multiple choice questions that are related to Ordinary level examination. 
+			Students who are playing this game are supposed to answer those questions within a <br>specific time.<br> 
+			<br>Questions will cover the Major subject matters of <b>Science</b>, <b>History</b>, <b>Languages</b>, <b>Mathematics</b> and  etc.
+			<p>
+				Answers provided by Students will be assessed. Depending on the marks gained by students their progress will be graded.<br><br> To make this game more interesting there will be Special Awards, Bonus Questions, 
+				Additional Helps and Figures for the students who perform well in the game.
+		</p>
+		</div>
+			</div>
+	
+	<div class="copyright">
+  	Created by <a href="http://www.fwpolice.com">Group 11</a>   
+	</div>    		 
+</div>      
 
 </body>
 </html>
